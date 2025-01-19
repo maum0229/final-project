@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="M.Ahsan Raza">
+    <title>M. Ahsan Raza's Personal Blog</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.8;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Section */
+        header {
+            background-image: url('https://plus.unsplash.com/premium_photo-1663040543387-cb7c78c4f012?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Random tech blog header image */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            animation: fadeIn 2s ease-out;
+        }
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+        }
+        header .btn {
+            background-color: #3498db;
+            padding: 12px 30px;
+            color: white;
+            border-radius: 30px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+        header .btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* About Section */
+        #about {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        #about img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        #about h2 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        #about p {
+            font-size: 1.1em;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        /* Article Section */
+        #article {
+            background-color: #ecf0f1;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        #article h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+        }
+        #article p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Blog Section */
+        #blog {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 60px 20px;
+        }
+        section:has(#blog) h2{
+            text-align: center;
+            padding: 20px 0;
+        }
+        .blog-post {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .blog-post:hover {
+            transform: translateY(-10px);
+        }
+        .blog-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .blog-post h3 {
+            margin-top: 15px;
+            font-size: 1.5em;
+            color: #34495e;
+        }
+        .blog-post p {
+            font-size: 1.1em;
+            color: #7f8c8d;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #2c3e50;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        #contact button {
+            padding: 12px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        #contact button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            #blog {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header id="home">
+        <div>
+            <h1>Welcome to My Personal Blog</h1>
+            <p>I'm M.Ahsan Raza, a tech enthusiast, writer, and lifelong learner.</p>
+            <a href="#about" class="btn">Learn More About Me</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <img src="https://cdn.pixabay.com/photo/2023/09/26/16/43/programmer-8277836_1280.jpg" alt="M.Ahsan Raza">
+        <h2>About Me</h2>
+        <p>Hello! I'm Ahsan, a passionate individual with a deep interest in technology, writing, and self-development. I believe in the power of knowledge and aim to share what I learn with the world. Writing helps me connect with people, express my ideas, and refine my thoughts.</p>
+    </section>
+
+    <!-- Article Section -->
+    <section id="article">
+        <h2>My Aims and Aspirations</h2>
+        <p>
+            My main goal is to become an expert in the field of computer science. I want to contribute to the tech community, create innovative solutions, and continuously improve my skills. Writing is another major goal of mine. I want to build a space where I can share my experiences, ideas, and knowledge.
+        </p>
+        <p>
+            I'm deeply motivated by the idea of lifelong learning and the possibilities that technology offers to improve lives. Whether it's coding, artificial intelligence, or web development, I'm constantly exploring new avenues of growth. Through my blog, I aim to inspire others to take on new challenges and always stay curious.
+        </p>
+    </section>
+
+    <!-- Blog Section -->
+    <section>
+        <h2>Latest Articles</h2>
+        <div id="blog">
+            <div class="blog-post">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coding">
+                <h3>How to Start with Programming</h3>
+                <p>Getting started with programming can be overwhelming, but once you break down the process, it's easier than you think! Here are some tips...</p>
+            </div>
+            <div class="blog-post">
+                <img src="https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?q=80&w=1986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Technology">
+                <h3>The Future of Artificial Intelligence</h3>
+                <p>Artificial Intelligence is transforming the way we live and work. In this article, I dive deep into the future of AI...</p>
+            </div>
+            <div class="blog-post">
+                <img src="https://images.unsplash.com/photo-1597239451127-914cc6d50a1d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Web Development">
+                <h3>Essential Web Development Tools You Should Know</h3>
+                <p>If you're starting out in web development, these tools will help you streamline your workflow and improve productivity...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea><br>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 M.Ahsan Raza</p>
